@@ -1,5 +1,4 @@
 /venv
 /*.conf
-/logs/*
 /modules/__pycache__
 /.idea
