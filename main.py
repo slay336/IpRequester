@@ -17,9 +17,8 @@ def main():
             config['Params'] = {}
             config_sect = config['Params']
             default_text = 'Write down the'
-            config_sect['sender'] = input(f'{default_text} sender: ')
-            config_sect['receiver'] = input(f'{default_text} receiver: ')
-            config_sect['password'] = input(f'{default_text} password: ')
+            for item in ('sender', 'receiver', 'password'):
+                config_sect[item] = input(f'{default_text} {item}: ')
             config_sect['last_ip'] = ip_getter.get_ip()['ip']
         except KeyError as ex:
             text = 'A non-existent param used. Check the correctness.'
